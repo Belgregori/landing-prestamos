@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --background: #05070e;
+  --foreground: #e8edf5;
+  --gold: #c6a15b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-ibm-plex);
+  --font-display: var(--font-cormorant);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #05070e;
+  color: var(--foreground);
+  font-family: var(--font-ibm-plex), "Segoe UI", sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-cormorant), "Times New Roman", serif;
+}
+
+::selection {
+  background: rgba(198, 161, 91, 0.28);
+  color: #fff;
+}
+
+.surface-card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    linear-gradient(165deg, rgba(18, 28, 48, 0.92) 0%, rgba(8, 12, 22, 0.94) 52%, rgba(4, 6, 12, 0.96) 100%);
+  box-shadow:
+    0 28px 70px -24px rgba(0, 0, 0, 0.75),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.surface-dots {
+  opacity: 0.06;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.9) 1px, transparent 0);
+  background-size: 18px 18px;
+}
+
+.simulador-rango {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 2px;
+  border-radius: 999px;
+  outline: none;
+  cursor: pointer;
+}
+
+.simulador-rango::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 999px;
+  background: #f4ead4;
+  border: 1px solid #c6a15b;
+  box-shadow: 0 0 0 4px rgba(198, 161, 91, 0.12);
+}
+
+.simulador-rango::-moz-range-thumb {
+  height: 14px;
+  width: 14px;
+  border: 1px solid #c6a15b;
+  border-radius: 999px;
+  background: #f4ead4;
+  box-shadow: 0 0 0 4px rgba(198, 161, 91, 0.12);
+}
